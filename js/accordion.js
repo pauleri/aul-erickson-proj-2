@@ -6,10 +6,10 @@ accordions.forEach(accordion => {
 
     accordion.addEventListener('click', function() {
 
-        // Toggle active class
+
         this.classList.toggle('active');
 
-        // Get the answer underneath
+
         const panel = this.nextElementSibling;
 
         const isOpen = this.classList.contains('active');

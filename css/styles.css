@@ -155,13 +155,11 @@ h1 {
     mix-blend-mode: difference;
 }
 
-/* Bottom slideshow controls */
 .slide-controls {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-
     display: flex;
     gap: 12px;
     z-index: 10;
@@ -184,20 +182,16 @@ h1 {
 .slide-dot:hover {
     background-color: white;
 }
-
 .photo-grid {
-    column-count: 4;
+    column-count: 3;
     column-gap: 12px;
 }
-
-/* Gallery images */
 .photo-grid img {
     display: block;
     width: 100%;
     height: auto;
     margin-bottom: 12px;
     break-inside: avoid;
-
     transition: opacity 0.3s ease;
 }
 .gallery-header {
@@ -359,7 +353,7 @@ h1 {
     line-height: 1.8;
     color: #cccccc;
 }
-/* FAQ Section */
+
 .faq-section {
     max-width: 900px;
     margin: 80px auto;
@@ -375,7 +369,7 @@ h1 {
     text-align: center;
 }
 
-/* Accordion buttons */
+
 .accordion {
     background-color: #000000;
     color: #ffffff;
@@ -390,25 +384,25 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-/* Hover and active state */
+
 .accordion:hover,
 .accordion.active {
     background-color: #222222;
 }
 
-/* Plus icon */
+
 .accordion::after {
     content: '+';
     float: right;
     font-size: 20px;
 }
 
-/* Minus icon when opened */
+
 .accordion.active::after {
     content: '−';
 }
 
-/* Hidden answer */
+
 .panel {
     background-color: #111111;
     color: #cccccc;
