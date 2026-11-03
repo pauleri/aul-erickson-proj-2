@@ -9,9 +9,20 @@ header {
     width: 100%;
     z-index: 10;
 }
+h1 {
+    font-family: 'PPTelegraph', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+}
 @font-face {
     font-family: 'PPTelegraph';
     src: url('fonts/PPTelegraf-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PPTelegraph';
+    src: url('../fonts/PPTelegraf-Bold.ttf') format('truetype');
+    font-weight: 700;
 }
 .hero {
     position: relative;
@@ -298,4 +309,94 @@ header {
     max-width: 650px;
     margin: 0 auto 25px;
     color: #cccccc;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 996px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+}
+.map-section {
+    text-align: center;
+    background-color: #000000;
+    padding: 60px 20px;
+}
+
+.map-section iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: none;
+}
+/* FAQ Section */
+.faq-section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+    color: white;
+    font-family: 'PPTelegraph', sans-serif;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Accordion buttons */
+.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 22px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #444444;
+    text-align: left;
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover and active state */
+.accordion:hover,
+.accordion.active {
+    background-color: #222222;
+}
+
+/* Plus icon */
+.accordion::after {
+    content: '+';
+    float: right;
+    font-size: 20px;
+}
+
+/* Minus icon when opened */
+.accordion.active::after {
+    content: '−';
+}
+
+/* Hidden answer */
+.panel {
+    background-color: #111111;
+    color: #cccccc;
+    padding: 0 22px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.panel p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 20px 0;
 }
