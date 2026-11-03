@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    background-color: #000000;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+@font-face {
+    font-family: 'PPTelegraph';
+    src: url('fonts/PPTelegraf-Regular.ttf') format('truetype');
+}
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 40%,
+        rgba(0, 0, 0, 0) 100%
+    );
+
+    z-index: 1;
+    pointer-events: none;
+}
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 20px;
+    gap: 24px;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    border-radius: 30px;
+}
+
+.nav-list a {
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #eee5e5;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #f0f0f0;
+    color: #941818;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.logo {
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    mix-blend-mode: difference;
+}
+
+.logo-icon {
+    width: 150px;
+    height: auto;
+    mix-blend-mode: difference;
+}
+/* Fullscreen slideshow */
+.slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Individual photographs */
+.slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Visible photograph */
+.slide.active {
+    opacity: 1;
+}
+
+/* Logos over photographs */
+.logo-container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+
+    mix-blend-mode: difference;
+}
+
+/* Bottom slideshow controls */
+.slide-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.slide-dot {
+    width: 35px;
+    height: 5px;
+    padding: 0;
+
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.slide-dot.active,
+.slide-dot:hover {
+    background-color: white;
+}
+
+.photo-grid {
+    column-count: 4;
+    column-gap: 12px;
+}
+
+/* Gallery images */
+.photo-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    break-inside: avoid;
+
+    transition: opacity 0.3s ease;
+}
+.gallery-header {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.gallery-header h1 {
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0 0 15px;
+}
+
+.gallery-header p {
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+.gallery-page header {
+    position: relative;
+    width: 100%;
+}
+.gallery-main {
+    padding: 20px 40px 60px;
+}
+.site-footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 12px;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+/* Homepage introduction */
+.home-intro {
+    background-color: #000000;
+    color: #ffffff;
+
+    min-height: 400px;
+    padding: 120px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* Main heading */
+.home-intro h1 {
+    font-family: 'PPTelegraph', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 6vw, 72px);
+
+    margin: 0 0 30px;
+}
+
+/* Description */
+.home-intro p {
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+
+    max-width: 650px;
+    margin: 0 0 40px;
+}
+
+/* Gallery link */
+.explore-button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+
+    font-family: 'PPTelegraph', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+
+    border: 1px solid #ffffff;
+    padding: 15px 30px;
+
+    transition: 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.home-intro {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    font-family: 'PPTelegraph', sans-serif;
+}
+
+.home-intro h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.home-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #cccccc;
+}
